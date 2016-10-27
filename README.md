@@ -1,5 +1,7 @@
 # Fall16-Team25
 
+#Project Name: EveOne
+
 #Abstract
 
 We propose a solution to eliminate trouble in managing events in school where parent participate by judging the event.
