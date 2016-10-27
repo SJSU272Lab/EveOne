@@ -32,16 +32,23 @@ Actors :
 
 
 As a organiser i wish to create events.
+
 As a organiser i wish to update event schedule and enter event description.
+
 As a organiser i wish to add rules of judging to the event page for parents to access.
+
 As a organiser i wish to send invites to parents for an event which they could accept or decline.
+
 As a organiser i wish application to pick judges from attending parent list by avoiding conflict.
 
-
+# 
 
 As a parent i wish to have mobile phone app for viewing events and invitations.
+
 As a parent i wish to accept or decline invitation to an event.
+
 As a parent i wish to acknowledge my attendance easily at event.
+
 As a parent i wish to access online sheet of team and judge names for my convenience.
 
 
