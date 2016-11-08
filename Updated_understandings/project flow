@@ -1,0 +1,24 @@
+Considering that school admins have accounts already created. 
+
+1.	school admin will create an event and would be admin of that event. Considering that one school will host event. 
+    Admin will create event and set criteria and rules of event.
+
+2.  Host will send invites to selected schools. 
+
+3.  Invitee could accept or decline the invite. 
+      On decline/accept of invitation, host will receive notification of action.  
+      On accept invitee will be asked for team details and csv of parent database(name,email).
+
+4.  Filter algorithm will filter out judges from the parent database list from system database. 
+    It also filters out reserve judges. These filtered results will be filled in sheet.
+
+5.  Admin can send mail invites to parents and parents would accept or reject invite.
+
+6. This information will be adjusted in the sheet accordingly.
+
+7.  Parent attendance at the event will be updated on this sheet as and when parent confirm their attendance.
+
+8.  Admin can send announcements through application, either to all judges or selected judges.
+
+Our approach is to avoid maintaining student data as it is not required. We focus on parent data(name, email). 
+
