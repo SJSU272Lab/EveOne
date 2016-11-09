@@ -7,16 +7,16 @@ Considering that school admins have accounts already created.
 
 3.  Invitee could accept or decline the invite. 
       On decline/accept of invitation, host will receive notification of action.  
-      On accept invitee will be asked for team details and csv of parent database(name,email).
+      On accept invitee will be asked for team details and parent details(name,email).
 
 4.  Filter algorithm will filter out judges from the parent database list from system database. 
-    It also filters out reserve judges. These filtered results will be filled in sheet.
+    It also filters out reserve judges. These filtered results will be filled in a mapping.
 
 5.  Admin can send mail invites to parents and parents would accept or reject invite.
 
-6. This information will be adjusted in the sheet accordingly.
+6. This information will be adjusted in the mapping accordingly.
 
-7.  Parent attendance at the event will be updated on this sheet as and when parent confirm their attendance.
+7.  Parent attendance at the event will be updated on mapping as and when parent confirm their attendance.
 
 8.  Admin can send announcements through application, either to all judges or selected judges.
 
