@@ -7,31 +7,42 @@
         </h1>
     </div>
 </div>
-<h1>Contact List App</h1>
+<h1>Enter Participant Details</h1>
 <table class="table">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Number</th>
+            <th>Student name</th>
+            <th>Student id</th>
+            <th>Parent name</th>
+            <th>parent e-mail</th>
             <th>Action</th>
             <th>&nbsp;</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><input class="form-control" ng-model="contact.name"></td>
-            <td><input class="form-control" ng-model="contact.email"></td>
-            <td><input class="form-control" ng-model="contact.number"></td>
-            <td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
-            <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+            <td><input class="form-control" ng-model="user.sname"></td>
+            <td><input class="form-control" ng-model="user.sid"></td>
+            <td><input class="form-control" ng-model="user.pname"></td>
+            <td><input class="form-control" ng-model="user.pemail"></td>
+            <td><button class="btn btn-primary" ng-click="addStudent()">Add Student</button></td>
+           <!--  <td><button class="btn btn-info btn-sm" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info btn-sm" ng-click="deselect()">Clear</button></td> -->
+           <td> <button type="button" class="btn btn-info btn-sm" ng-click="update()>
+          <span class="glyphicons glyphicon-pencil"></span>
+        </button>&nbsp;&nbsp; <button type="button" class="btn btn-info btn-sm" ng-click="deselect()>
+          <span class="glyphicons glyphicon-remove"></span></button>
+          </td>
         </tr>
         <tr ng-repeat="contact in contactlist">
-            <td>{{contact.name}}</td>
-            <td>{{contact.email}}</td>
-            <td>{{contact.number}}</td>
-            <td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
-            <td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
+            <td>{{user.sname}}</td>
+            <td>{{user.sid}}</td>
+            <td>{{user.pname}}</td>
+            <td>{{user.pemail}}</td>
+            <td><button type="button" class="btn btn-info btn-sm" ng-click="update()>
+          <span class="glyphicons glyphicon-pencil"></span>
+        </button></td>
+            <td><button type="button" class="btn btn-info btn-sm" ng-click="deselect()>
+          <span class="glyphicons glyphicon-remove"></span></button></td>
         </tr>
     </tbody>
 </table>
