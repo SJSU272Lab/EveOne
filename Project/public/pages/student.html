@@ -11,10 +11,10 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Student name</th>
-            <th>Student id</th>
-            <th>Parent name</th>
-            <th>parent e-mail</th>
+            <th>Student Name</th>
+            <th>Student Id</th>
+            <th>Parent Name</th>
+            <th>Parent E-mail</th>
             <th>Action</th>
             <th>&nbsp;</th>
         </tr>
@@ -27,22 +27,19 @@
             <td><input class="form-control" ng-model="user.pemail"></td>
             <td><button class="btn btn-primary" ng-click="addStudent()">Add Student</button></td>
            <!--  <td><button class="btn btn-info btn-sm" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info btn-sm" ng-click="deselect()">Clear</button></td> -->
-           <td> <button type="button" class="btn btn-info btn-sm" ng-click="update()>
-          <span class="glyphicons glyphicon-pencil"></span>
-        </button>&nbsp;&nbsp; <button type="button" class="btn btn-info btn-sm" ng-click="deselect()>
-          <span class="glyphicons glyphicon-remove"></span></button>
+           <td> <button type="button" class="glyphicon glyphicon-pencil" ng-click="update()"></button>&nbsp;&nbsp; 
+		  <button type="button" class="glyphicon glyphicon-remove" ng-click="deselect()"></button>
           </td>
         </tr>
-        <tr ng-repeat="contact in contactlist">
+        <tr ng-repeat="user in contactlist">
             <td>{{user.sname}}</td>
             <td>{{user.sid}}</td>
             <td>{{user.pname}}</td>
             <td>{{user.pemail}}</td>
-            <td><button type="button" class="btn btn-info btn-sm" ng-click="update()>
-          <span class="glyphicons glyphicon-pencil"></span>
+            <td><button type="button" class="glyphicon glyphicon-pencil" ng-click="update()">
         </button></td>
-            <td><button type="button" class="btn btn-info btn-sm" ng-click="deselect()>
-          <span class="glyphicons glyphicon-remove"></span></button></td>
+            <td><button type="button" class="glyphicon glyphicon-remove" ng-click="deselect()">
+          </button></td>
         </tr>
     </tbody>
 </table>
