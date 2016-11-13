@@ -1,72 +1,76 @@
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute', 'datatables', 'datatables.bootstrap']);
 
 
-app.config(function($routeProvider){
+app.config(function ($routeProvider) {
   $routeProvider
 
-  .when('/',{
-    templateUrl : 'pages/student.html',
-    controller : 'StudentController'
+    .when('/students', {
+    templateUrl: 'pages/students.html',
+    controller: 'StudentController'
   })
 
-  .when('/events',{
-    templateUrl : 'pages/events.html',
-    controller : 'EventController'
+  .when('/events', {
+    templateUrl: 'pages/events.html',
+    controller: 'EventController'
   })
 
-  .otherwise({redirectTo: '/'});
+  .otherwise({
+    redirectTo: '/events'
+  });
 });
 
-app.controller('StudentController', ['$scope', '$http', function($scope, $http) {
-    console.log("Hello World from controller");
+
+app.controller('StudentController', ['$scope', '$http', function ($scope, $http) {
+  console.log("Hello World from controller");
 
 
-var refresh = function() {
-  $http.get('/contactlist').success(function(response) {
-    console.log("I got the data I requested");
-    $scope.contactlist = response;
-    $scope.contact = "";
-  });
-};
+  var refresh = function () {
+    $http.get('/studentlist').success(function (response) {
+      console.log("I got the data I requested");
+      $scope.studentlist = response;
+      $scope.student = "";
+    });
+  };
 
-refresh();
+  refresh();
 
-$scope.addContact = function() {
-  console.log($scope.contact);
-  $http.post('/contactlist', $scope.contact).success(function(response) {
-    console.log(response);
-    refresh();
-  });
-};
+  $scope.addStudent = function (student) {
+    console.log(student.name);
+    $http.post('/studentlist', student).success(function (response) {
+      console.log(response);
+      refresh();
+    });
+  };
 
-$scope.remove = function(id) {
-  console.log(id);
-  $http.delete('/contactlist/' + id).success(function(response) {
-    refresh();
-  });
-};
+  $scope.remove = function (id) {
+    console.log(id);
+    $http.delete('/studentlist/' + id).success(function (response) {
+      refresh();
+    });
+  };
 
-$scope.edit = function(id) {
-  console.log(id);
-  $http.get('/contactlist/' + id).success(function(response) {
-    $scope.contact = response;
-  });
-};  
+  $scope.edit = function (id) {
+    console.log(id);
+    $http.get('/studentlist/' + id).success(function (response) {
+      $scope.student = response;
+    });
+  };
 
-$scope.update = function() {
-  console.log($scope.contact._id);
-  $http.put('/contactlist/' + $scope.contact._id, $scope.contact).success(function(response) {
-    refresh();
-  })
-};
+  $scope.update = function (student) {
+    console.log($scope.student._id);
+    console.log(student);
+    $http.put('/studentlist/' + $scope.student._id, student).success(function (response) {
+      refresh();
+    })
+  };
 
-$scope.deselect = function() {
-  $scope.contact = "";
-}
+  $scope.deselect = function () {
+    $scope.student = "";
+  }
 
 }]);
 
 
-app.controller('EventController', function($scope) {
+app.controller('EventController', function ($scope) {
   $scope.message = 'Hello from EventController';
 });
