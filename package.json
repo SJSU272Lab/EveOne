@@ -1,0 +1,23 @@
+{
+  "name": "fall16-team25",
+  "version": "1.0.0",
+  "description": "We are building a solution to automate managing events/tournaments (such as speech and debate) for schools where parent participate for judging the event.\r Our approach is to facilitate collaboration between organizer and parents seamlessly. Organizer uses our web application to create and manage event and judges information, he can access parent list of mail id's to send invites for event. Parent uses mobile application to accept or decline invites. Parent attendance in the event can be recorded by scanning the parent QR code using QR scanner. We propose a filter algorithm to filter out parents as judges and also backup judges for every team tournament. Filter algorithm will discard parent as a judge if its not in accordance with the policy. On demand matching(back filling)  can be done by the system itself.",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SJSU272Lab/Fall16-Team25.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SJSU272Lab/Fall16-Team25/issues"
+  },
+  "homepage": "https://github.com/SJSU272Lab/Fall16-Team25#readme"
+}
