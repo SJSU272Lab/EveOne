@@ -7,33 +7,35 @@
         </h1>
     </div>
 </div>
-<h1>Register you school here</h1>
+<h1 class="page-header">Register you school here</h1>
+<form role = "form">
 <table class="table">
-        <tr>
-            <td>School Name</td>
+        <tr class="form-group">
+            <td><label>School Name</label></td>
 			<td><input class="form-control" ng-model="school.name"></td>
 		</tr>
-		<tr>
-			<td>Point of Contact</td>
+		<tr class="form-group">
+			<td><label>Point of Contact</label></td>
 			<td><input class="form-control" ng-model="school.poc"></td>
 		</tr>
-		<tr>
-            <td>School Email</td>
+		<tr class="form-group">
+            <td><label>School Email</label></td>
 			<td><input class="form-control" ng-model="school.email"></td>
 		</tr>
-		<tr>
-            <td>Password</td>
+		<tr class="form-group">
+            <td><label>Password</label></td>
 			<td><input class="form-control" ng-model="school.password"></td>
 		</tr>
-		<tr>
-			<td>Confirm Password</td>
+		<tr class="form-group">
+			<td><label>Confirm Password</label></td>
 			<td><input class="form-control" ng-model="school.confirmpassword"></td>
         </tr>	
-		<tr>
+		<tr class="form-group">
 			<td align = "center"><button class="btn btn-primary" ng-click="addSchool()">Register</button></td>
 			<td align = "center"><input class="btn btn-info" type = "button" value = "Clear"></td>
 		</tr>	
 </table>
+</form>
 <br />
 <br />
 <br />

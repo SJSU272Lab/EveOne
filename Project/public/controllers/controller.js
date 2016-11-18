@@ -1,5 +1,5 @@
 var app = angular.module('app', ['ngRoute', 'datatables', 'datatables.bootstrap']);
-
+var app = angular.module('myApp', ['angularjs-datetime-picker']);
 
 app.config(function ($routeProvider) {
   $routeProvider
