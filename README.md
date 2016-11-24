@@ -2,23 +2,36 @@
 
 ##Project Name: EventOne
 
-###Abstract
+Table of Contents
+-----------------
+
+- [Abstract](#abstract)
+- [Judging Rules](#judging-rules)
+- [User Stories](#user-stories)
+- [OAuth URI Image](#oauth-uri-image)
+
+#
+#
+#
+
+#Abstract
+--------
 
 We are building a solution to automate managing events/tournaments (such as speech and debate) for schools where parent participate for judging the event.
 Our approach is to facilitate collaboration between organizer and parents seamlessly. Organizer uses our web application to create and manage event and judges information, he can access parent list of mail id's to send invites for event. Parent uses mobile application to accept or decline invites. Parent attendance in the event can be recorded by scanning the parent QR code using QR scanner. We propose a filter algorithm to filter out parents as judges and also backup judges for every team tournament. Filter algorithm will discard parent as a judge if its not in accordance with the policy. On demand matching(back filling)  can be done by the system itself.
 
-###Link to architecture diagram 
-https://goo.gl/hZiZw5
-
-###Link to flow diagram
-https://goo.gl/5MFNBA
-
-###Our understanding of the project
-https://goo.gl/Zvcl3d
+#
+#
+Judging Rules
+--------------
 
 ### Please see the judging instruction to understand the process: http://www.myteacherpages.com/webpages/SpeechandDebate/files/Judging%20Speech%20and%20Debate%20Instructions%20Manual.pdf
 
-##User Stories
+#
+#
+
+User Stories
+------------
 
 Actors :
 
@@ -52,5 +65,12 @@ Use case #9: system sends a Thank you note to parents
 good enough for now.. 
 
 
+#
+#
+
+OAuth URI Image
+---------------
+
+![](https://cloud.githubusercontent.com/assets/21318180/20609485/03ab2ed2-b242-11e6-8258-201611297c81.PNG)
 
 
