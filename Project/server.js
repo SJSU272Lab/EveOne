@@ -149,6 +149,53 @@ app.get('/sessiondestroy', function (req, res) {
 });
 
 
+//user profile info for school
+app.get('/schoolprofile/:name', function (req, res) {
+	
+  console.log('I received a GET request');
+
+  db.schoollist.findOne({"username":req.params.name},(function (err, docs) {
+	console.log(docs);
+	res.send(docs);
+
+	}));
+});
+
+//get event detials by school username 
+app.get('/geteventlist/:name', function (req, res) {
+	
+  console.log('I received a GET request');
+
+  db.eventlist.find({"schoolUsername":req.params.name},(function (err, docs) {
+	console.log(docs);
+	res.send(docs);
+
+	}));
+});
+
+//get school name by school username
+app.get('/getschoolname/:name', function (req, res) {
+	
+  console.log('I received a GET request');
+
+  db.schoollist.findOne({"username":req.params.name},(function (err, docs) {
+	console.log(docs);
+	res.send(docs);
+
+	}));
+});
+
+//get all school name from schoollist
+app.get('/getschoollist', function (req, res) {
+	
+	//get school details
+	db.schoollist.find({},(function (err, docs) {
+	console.log(docs);
+	res.send(docs);
+
+	}));
+});
+
 
 app.listen(3000);
 console.log("Server running on port 3000");
