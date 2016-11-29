@@ -1,6 +1,6 @@
 {
   "name": "heroku-node",
-  "description": "Our sample Node to Heroku app",
+  "description": "EveOne heroku deployment.",
   "main": "server.js",
   "scripts": {
     "start": "node Project/server.js"
