@@ -1,0 +1,91 @@
+
+<!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Assign Event Judge
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="#/">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-cubes"></i> Assign Event Judge 
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+				
+				<div class="row">
+                    <div class="col-lg-12">
+
+                        <form role="form" onload="initialize()">
+
+                            <div class="form-group">
+                                <label> Select Event : </label>
+                                <select  id="event" class="form-control" ng-model="judge.eventName" ng-options="event for event in eventlist">
+									<option value="">---Please select Event---</option>
+                                </select>
+                            </div>
+							
+                            <button type="submit" class="btn btn-info" ng-click="findEvent(judge.eventName)"> Find </button>
+                        </form>
+                    </div>
+                </div>
+				
+				<br/>
+				<br/>
+				<div class="row">
+                    <div class="col-lg-12">
+                        <h4>Team Detail</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                    <tr>
+										<th> Team Number </th> 
+										<th> Judge Name </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="judge in judgelist">
+										<td id={{judge.teamNumber}}> Team - {{judge.teamNumber}}</td>
+										<td ondrop="drop(event,this.id)" ondragover="allowDrop(event)" id={{judge.teamNumber}}><button type="button" draggable="true" ondragstart="drag(event)" class="btn btn-success" id={{judge.parentName}}>{{judge.parentName}}</button></td>
+									</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+				<button type="submit" id="btn" class="btn btn-info" ng-click="automatic(judge.eventName)"> Automatic Assign Judges </button>
+				<br/>
+				<br/>
+				
+				
+				<div class="row">
+                    <div class="col-lg-12 panel panel-success">
+						<br/>
+                        <span ng-repeat="judge in otherjudgelist" ondrop="drop(event,this.id)" ondragover="allowDrop(event)">
+							&nbsp; &nbsp; &nbsp; <button type="button" draggable="true" ondragstart="drag(event,this.id)" class="btn btn-success" id= {{judge}}> {{judge}}</button> &nbsp; &nbsp; &nbsp;
+						</span>
+						<br/><br/>
+                    </div>
+                </div>
+				
+    <script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+	angular.element(document.getElementById('span')).scope().updateDrag(ev.target.id, document.getElementById('event').options[document.getElementById('event').selectedIndex].text);
+}
+
+function drop(ev,id) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+	angular.element(document.getElementById('span')).scope().updateDrop(data, id, document.getElementById('event').options[document.getElementById('event').selectedIndex].text);
+}
+
+</script>
