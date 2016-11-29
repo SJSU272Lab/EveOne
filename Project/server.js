@@ -539,7 +539,7 @@ app.put('/updateteamlistassignDrag/:id/:name', function (req, res) {
 
   db.teamlist.findAndModify({
     query: {eventId: req.params.id , parentName: req.params.name},
-    update: {$set: {parentName:""}},
+    update: {$unset: {parentName:1}},
     new: true}, function (err, doc) {
 		console.log(doc);
 		res.json(doc);

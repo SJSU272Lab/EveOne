@@ -64,9 +64,11 @@
 				<div class="row">
                     <div class="col-lg-12 panel panel-success">
 						<br/>
+						<div>
                         <span ng-repeat="judge in otherjudgelist" ondrop="drop(event,this.id)" ondragover="allowDrop(event)">
 							&nbsp; &nbsp; &nbsp; <button type="button" draggable="true" ondragstart="drag(event,this.id)" class="btn btn-success" id= {{judge}}> {{judge}}</button> &nbsp; &nbsp; &nbsp;
 						</span>
+						</div>
 						<br/><br/>
                     </div>
                 </div>
@@ -88,4 +90,11 @@ function drop(ev,id) {
 	angular.element(document.getElementById('span')).scope().updateDrop(data, id, document.getElementById('event').options[document.getElementById('event').selectedIndex].text);
 }
 
+</script>
+
+<script src="http://code.jquery.com/jquery-1.5.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+		$('table').find('button:empty').remove();
+    });
 </script>
