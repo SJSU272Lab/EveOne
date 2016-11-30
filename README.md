@@ -9,7 +9,7 @@ Table of Contents
 - [Judging Rules](#judging-rules)
 - [User Stories](#user-stories)
 - [OAuth URI Image](#oauth-uri-image)
-- [Heroku deployment](#Heroku url) 
+- [Heroku deployment](#heroku-deployment) 
 
 #
 #
