@@ -24,6 +24,11 @@ app.config(function($routeProvider){
     controller : 'ViewEventController'
   })
   
+  .when('/editevent/:id',{
+    templateUrl : 'pages/editEvent.html',
+    controller : 'EditEventController'
+  })
+  
   .when('/invitedevent',{
     templateUrl : 'pages/invitedEvent.html',
     controller : 'InvitedEventController'
@@ -240,7 +245,7 @@ app.controller('DashboardController', ['$scope', '$http', '$rootScope', '$locati
 }]);
 
 //View Event 
-app.controller('ViewEventController', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
+app.controller('ViewEventController', ['$scope', '$http', '$rootScope', '$location', '$routeParams', function($scope, $http, $rootScope, $location, $routeParams) {
 	console.log('Hello from ViewEventController');
   
 	$http.get('/geteventlist/' + $rootScope.school_username).success(function(response) {
@@ -258,8 +263,36 @@ app.controller('ViewEventController', ['$scope', '$http', '$rootScope', function
 		$scope.eventlist = response;
 		
 	});
+	
+	$scope.editEvent = function(id){
+		
+		console.log(id);
+		$location.path('/editevent/'+id);
+	};
     
   
+}]);
+
+//Edit event
+app.controller('EditEventController', ['$scope', '$http', '$rootScope', '$location', '$routeParams', function($scope, $http, $rootScope, $location, $routeParams) {
+	console.log('Hello from EditEventController');
+	console.log($routeParams.id);
+	
+	$http.get('/geteventlistnoti/' + $routeParams.id).success(function(response) {
+		console.log("I got the data I requested");
+		console.log(response);
+		$scope.schoolevent = response;
+	});
+	
+	$scope.updateEvent = function(){
+		
+		//update event list by event id.
+		$http.put('/updateeventlist/' + $routeParams.id, $scope.schoolevent).success(function(response) {
+			console.log("updated : " + response);
+		});
+		
+		$location.path('/viewevent');
+	};
 }]);
 
 
@@ -359,7 +392,7 @@ app.controller('ParentInvitationController', ['$scope', '$http', '$rootScope', f
 		});
 		
 		//add school username to invite [] -> bcz already sent parent invitation
-		$http.put('/updateeventlist/' + $rootScope.school_username +'/' + id).success(function(response) {
+		$http.put('/updateinviteineventlist/' + $rootScope.school_username +'/' + id).success(function(response) {
 			console.log("updated : " + response);
 			refresh();
 		});

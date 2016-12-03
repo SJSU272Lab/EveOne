@@ -14,9 +14,19 @@ app.config(function($routeProvider){
     controller : 'ParentProfileController'
   })
   
-  .when('/event',{
+  .when('/eventList',{
     templateUrl : 'Parent/event.html',
     controller : 'EventController'
+  })
+  
+  .when('/activeEvents',{
+    templateUrl : 'Parent/activevent.html',
+    controller : 'ActiveEventController'
+  })
+  
+  .when('/judgeEvents',{
+    templateUrl : 'Parent/judgeevent.html',
+    controller : 'JudgeEventController'
   })
 
   .otherwise({redirectTo: '/'});
@@ -108,7 +118,41 @@ app.controller('ParentProfileController', ['$scope', '$http', '$rootScope', func
 	
 }]);
 
-//event
+//active events
+app.controller('ActiveEventController', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
+    console.log("Hello from ActiveEventController");
+
+	//get event id from judgelist by parent usename  (Email)
+	
+	refresh = function(){
+			$http.get('/findjudgenotreahed/'+ $rootScope.parent_username).success(function(response) {
+				console.log(response);
+				
+				$scope.eventlist = [];
+				
+				for(var i=0; i<response.length; i++){
+					
+					$http.get('/geteventlistnoti/'+ response[i].eventId).success(function(res) {
+						console.log(res);
+						$scope.eventlist.push(res);
+					});
+				}
+			});
+	};
+	refresh();
+			
+			$scope.reached = function(id){
+			
+				$http.put('/judgelist/' + $rootScope.parent_username +'/' + id).success(function(response) {
+					document.getElementById("yesbutton").disabled = true;
+				 });
+				refresh();
+			};
+		
+	
+}]);
+	
+//all event list
 app.controller('EventController', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
     console.log("Hello from EventController");
 
@@ -126,14 +170,26 @@ app.controller('EventController', ['$scope', '$http', '$rootScope', function($sc
 					});
 				}
 			});
-			
-			$scope.reached = function(id){
-			
-				$http.put('/judgelist/' + $rootScope.parent_username +'/' + id).success(function(response) {
-					document.getElementById("yesbutton").disabled = true;
-				 });
-			};
-		
 	
 }]);
+
+//judge events
+app.controller('JudgeEventController', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
+    console.log("Hello from JudgeEventController");
+
+	//get event id from judgelist by parent usename  (Email)
+			$http.get('/findjudgelistforinstruction/'+ $rootScope.parent_username).success(function(response) {
+				console.log(response);
+				
+				$scope.eventlist = [];
+				
+				for(var i=0; i<response.length; i++){
+					
+					$http.get('/geteventlistnoti/'+ response[i].eventId).success(function(res) {
+						console.log(res);
+						$scope.eventlist.push(res);
+					});
+				}
+			});
 	
+}]);

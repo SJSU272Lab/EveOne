@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
 var bodyParser = require('body-parser');
-var db = mongojs('user1:user1@ds113668.mlab.com:13668/272school',['schoollist']);
+var db = mongojs('user1:user1@ds155087.mlab.com:55087/272school',['schoollist']);
 var session = require('express-session');
 
 var sess;
@@ -282,12 +282,26 @@ app.get('/getparentemail/:name', function (req, res) {
 });
 
 //update event list when school clicks on invite button of parent invitation
-app.put('/updateeventlist/:name/:id', function (req, res) {
+app.put('/updateinviteineventlist/:name/:id', function (req, res) {
 
 	console.log("name "+ req.params.name +" id " + req.params.id);
 	db.eventlist.findAndModify({
     query: {"_id": mongojs.ObjectId(req.params.id)},
     update: {$push: {"invited": req.params.name }},
+    new: true}, function (err, doc) {
+      console.log('update'+doc);
+      res.json(doc);
+    });
+});
+
+
+//update event list when school wants to edit event info
+app.put('/updateeventlist/:id', function (req, res) {
+
+	console.log(" id " + req.params.id);
+	db.eventlist.findAndModify({
+    query: {"_id": mongojs.ObjectId(req.params.id)},
+    update: {$set: {"eventName": req.body.eventName, "team": req.body.team, "member": req.body.member, "date": req.body.date, "time": req.body.time, "instruction": req.body.instruction}},
     new: true}, function (err, doc) {
       console.log('update'+doc);
       res.json(doc);
@@ -570,6 +584,29 @@ app.put('/updatjudgelistDrag/:id/:mail', function (req, res) {
 		res.json(doc);
     }
   );
+});
+
+//get event id from judhelist table by parent username -> if reached = no
+app.get('/findjudgenotreahed/:email', function (req, res) {
+	
+  console.log('I received a parent GET request');
+
+  db.judgelist.find({"parentEmail":req.params.email, "reached":"no"},(function (err, docs) {
+	console.log(docs);
+	res.send(docs);
+
+	}));
+});
+
+app.get('/findjudgelistforinstruction/:email', function (req, res) {
+	
+  console.log('I received a parent GET request');
+
+  db.judgelist.find({"parentEmail":req.params.email, "assign":"yes"},(function (err, docs) {
+	console.log(docs);
+	res.send(docs);
+
+	}));
 });
 
 app.listen(process.env.PORT || 3000, function(){
