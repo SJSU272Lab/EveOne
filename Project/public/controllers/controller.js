@@ -402,7 +402,7 @@ app.controller('ParentInvitationController', ['$scope', '$http', '$rootScope', f
 }]);
 
 //Assign Judge
-app.controller('JudgeController', ['$scope', '$http', '$rootScope', '$window', function($scope, $http, $rootScope, $window) {
+app.controller('JudgeController', ['$scope', '$http', '$rootScope', '$window', '$location', function($scope, $http, $rootScope, $window, $location) {
 	console.log('Hello from JudgeController');
 	//disable assign judge button
 	document.getElementById("btn").disabled = true;
@@ -475,6 +475,7 @@ app.controller('JudgeController', ['$scope', '$http', '$rootScope', '$window', f
 		});
 		
 	};
+	
 	
 	//automatic assign judge for each team
 	$scope.automatic = function(name,id)
@@ -560,7 +561,11 @@ app.controller('JudgeController', ['$scope', '$http', '$rootScope', '$window', f
 					}
 				}
 			});
+			
+			
 		});
+		
+		$location.path('/');
 		
 	};
 	

@@ -4,7 +4,8 @@ var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
 var bodyParser = require('body-parser');
-var db = mongojs('user1:user1@ds155087.mlab.com:55087/272school',['schoollist']);
+//var db = mongojs('user1:user1@ds155087.mlab.com:55087/272school',['schoollist']);
+var db = mongojs('user1:user1@ds113668.mlab.com:13668/272school',['schoollist']);
 var session = require('express-session');
 
 var sess;
