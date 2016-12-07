@@ -7,9 +7,17 @@
     android:layout_height="match_parent"
     tools:context="com.akshaysonvane.eveone.MainActivity">
 
-    <WebView android:id="@+id/webview"
-             xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="fill_parent"
-             android:layout_height="fill_parent"
-        />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <WebView android:id="@+id/webview"
+                 xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+            />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 </RelativeLayout>
