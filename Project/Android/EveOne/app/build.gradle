@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'cmpe272'
+            keyPassword 'cmpe272'
+            storeFile file('C:/Users/Akshay/Desktop/eveone.jks')
+            storePassword 'cmpe272'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "23.0.3"
     defaultConfig {

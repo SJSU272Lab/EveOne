@@ -1,39 +1,38 @@
-	<!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Event List
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="parentIndex.html">Event List</a>
-                            </li>
-                        </ol>
+<!-- Page Heading -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Judge Events
+        </h1>
+        <ol class="breadcrumb">
+            <li>
+                <i class="fa fa-dashboard"></i> <a href="parentIndex.html">Event List</a>
+            </li>
+        </ol>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <h2>Event</h2>
+        <div ng-repeat="event in eventlist">
+            <h2 ng-hide="eventlist.length">No Events</h2>
+            <div class="col-lg-12 panel panel-success"><br/>
+                <div> <b>Event name  :  </b> {{event.eventName}} </div>
+                <div> <b> Event Date  :  </b> {{event.date}}</div>
+                <div> <b> Event Time  :  </b> {{event.time}}</div>
+                <div> <b> School Name  :  </b> {{event.schoolUsername}}</div><br/>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Event Instructions</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <div> {{event.instruction}} </div>
+                        </div>
                     </div>
                 </div>
-                <!-- /.row -->
-				
-				<div class="row">
-                    <div class="col-lg-12">
-                        <h2>Event</h2>
-								<div ng-repeat="event in eventlist">
-									<div class="col-lg-12 panel panel-success"><br/>
-                                        <div> <b>Event name  :  </b> {{event.eventName}} </div>
-                                        <div> <b> Event Date  :  </b> {{event.date}}</div>
-                                        <div> <b> Event Time  :  </b> {{event.time}}</div>
-										<div> <b> School Name  :  </b> {{event.schoolUsername}}</div><br/>
-										<div class="panel panel-info">
-											<div class="panel-heading">
-												<h3 class="panel-title"> Event Instructions</h3>
-											</div>
-											<div class="panel-body">
-												<div class="list-group">
-													<div> {{event.instruction}} </div>
-												</div>
-											</div>
-										</div>
-						
-									</div>
-								</div>
-                    </div>
-                </div>
+            </div>
+        </div>
+    </div>
+</div>

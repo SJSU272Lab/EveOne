@@ -1,9 +1,16 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            Students
-            <small></small>
+            Student List
         </h1>
+        <ol class="breadcrumb">
+            <li>
+                <i class="fa fa-dashboard"></i> <a href="#/">Dashboard</a>
+            </li>
+            <li class="active">
+                <i class="fa fa-user"></i> Student List
+            </li>
+        </ol>
     </div>
 </div>
 <table class="table" datatable="ng">
@@ -33,7 +40,7 @@
         <tr ng-repeat="student in studentlist">
             <td>{{student.sid}}</td>
             <td>{{student.name}}</td>
-            <td>{{student.parentName}}</td> 
+            <td>{{student.parentName}}</td>
             <td>{{student.parentContactnumber}}</td>
             <td>{{student.parentEmail}}</td>
             <td><button class="btn btn-danger" ng-click="remove(student._id)">Remove</button></td>

@@ -1,45 +1,110 @@
 <!-- Page Heading -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Dashboard
+        </h1>
+        <ol class="breadcrumb">
+            <li>
+                <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
+            </li>
+        </ol>
+    </div>
+</div>
+<br/><br/>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Dashboard
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                            </li>
-                        </ol>
+                    <div class="col-xs-3">
+                        <i class="fa fa-cubes fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{events}}</div>
+                        <div>Number of Events!</div>
                     </div>
                 </div>
-                <!-- /.row -->
-				<div class="row">
-                    <div class="col-lg-12">
-                        <h2>Event Invitation Table</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-striped">
-                                <thead>
-                                    <tr>
-                                        <th> Event Name</th>
-                                        <th> Event Date</th>
-                                        <th> Event Time</th>
-										<th> Inviter School</th>
-										<th> Number of Team</th> 
-										<th> Number of Members per Team</th>
-										<th> &nbsp </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="noti in notification">
-                                        <td> {{noti.eventName}}</td>
-                                        <td> {{noti.date}}</td>
-                                        <td> {{noti.time}}</td>
-										<td> {{noti.schoolUsername}}</td>
-										<td> {{noti.team}}</td>
-										<td> {{noti.member}}</td>
-										<td> <button class="btn btn-success" ng-click="eventEntry(noti._id)"> Okay </button> </td>
-									</tr>
-                                </tbody>
-                            </table>
+            </div>
+            <a href="#/viewevent">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-envelope-square fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{invited_events}}</div>
+                        <div>Number of Invited Events!</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#/invitedevent">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-users fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">{{students}}</div>
+                        <div>Number of Students!</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#/student">
+                <div class="panel-footer">
+                    <span class="pull-left">View Details</span>
+                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-lg-12">
+        <div ng-repeat="event in notification">
+            <h2 ng-hide="!notification.length">Event Invitations</h2>
+            <div class="col-lg-12 panel panel-success"><br/>
+                <div> <b>Event Name  :  </b> {{event.eventName}} </div>
+                <div> <b> Event Date  :  </b> {{event.date}}</div>
+                <div> <b> Event Time  :  </b> {{event.time}}</div>
+                <div> <b> Inviter School  :  </b> {{event.schoolUsername}}</div>
+                <div> <b> Number of teams :  </b> {{event.team}} </div>
+                <div> <b> Number of Members per Team  :  </b> {{event.member}}</div><br/>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Event Instructions</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <div> {{event.instruction}} </div>
                         </div>
                     </div>
-                </div>
+                </div><br/>
+                <div> <button class="btn btn-success" ng-click="eventEntry(noti._id)"> Okay </button> </div><br/>
+            </div>
+        </div>
+    </div>
+</div>

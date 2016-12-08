@@ -6,5 +6,5 @@ package com.akshaysonvane.eveone.utils;
 
 public class Utils
 {
-    public static String BASE_URL = "http://c99cea7f.ngrok.io/parentlogin.html";
+    public static String BASE_URL = "https://eveone.herokuapp.com/parentLogin.html";
 }

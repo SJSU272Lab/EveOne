@@ -20,6 +20,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"></script>
 </head>
 
 <body>
@@ -60,13 +63,13 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-					<li>
+                    <li>
                         <a href="#/"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="#/student"><i class="fa fa-fw fa-user"></i> Students</a>
                     </li>
-					<li>
+                    <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-cubes"></i> Event <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
@@ -75,12 +78,12 @@
                             <li>
                                 <a href="#/viewevent">View Event</a>
                             </li>
-							<li>
+                            <li>
                                 <a href="#/invitedevent">Invited Event</a>
                             </li>
                         </ul>
                     </li>
-					<li>
+                    <li>
                         <a href="#/parentinvitation"><i class="fa fa-fw fa-envelope"></i> Parent Invitation</a>
                     </li>
                     <li>
@@ -130,18 +133,14 @@
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/datatables/jquery.dataTables.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"></script>
     <script src="controllers/controller.js"></script>
     <script src="js/datatables/angular-datatables.min.js"></script>
     <script src="js/datatables/angular-datatables.bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/datatables/angular-datatables.css">
     <link rel="stylesheet" href="css/datatables/datatables.bootstrap.min.css">
-	
 </body>
 
 </html>

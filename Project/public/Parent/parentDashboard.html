@@ -1,41 +1,51 @@
 <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Dashboard
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- /.row -->
-				<div class="row">
-                    <div class="col-lg-12">
-                        <h2>Event Invitation Table</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-striped">
-                                <thead>
-                                    <tr>
-                                        <th> Event Name</th>
-                                        <th> Event Date</th>
-                                        <th> Event Time</th>
-										<th> Inviter School</th>
-										<th> &nbsp </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="noti in notification">
-                                        <td> {{noti.eventName}}</td>
-                                        <td> {{noti.date}}</td>
-                                        <td> {{noti.time}}</td>
-										<td> {{noti.schoolUsername}}</td>
-										<td> <button class="btn btn-success" ng-click="okayNotification(noti._id, noti.schoolUsername)"> Okay </button> </td>
-									</tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Dashboard
+        </h1>
+        <ol class="breadcrumb">
+            <li>
+                <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
+            </li>
+        </ol>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <h2>Event Invitations</h2>
+        <div ng-repeat="noti in notification">
+            <h2 ng-hide="notification.length">No Events</h2>
+            <div class="col-lg-12 panel panel-success"><br/>
+                <div> <b>Event name  :  </b> {{noti.eventName}} </div>
+                <div> <b> Event Date  :  </b> {{noti.date}}</div>
+                <div> <b> Event Time  :  </b> {{noti.time}}</div><br/>
+                <div> <b> Inviter School  :  </b> {{noti.schoolUsername}}</div><br/>
+                <div><button class="btn btn-success" ng-click="okayNotification(noti._id, noti.schoolUsername)"> Okay </button></div><br/>
+            </div>
+        </div>
+        <!--<div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th> Event Name</th>
+                        <th> Event Date</th>
+                        <th> Event Time</th>
+                        <th> Inviter School</th>
+                        <th> &nbsp; </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="noti in notification">
+                        <td> {{noti.eventName}}</td>
+                        <td> {{noti.date}}</td>
+                        <td> {{noti.time}}</td>
+                        <td> {{noti.schoolUsername}}</td>
+                        <td> <button class="btn btn-success" ng-click="okayNotification(noti._id, noti.schoolUsername)"> Okay </button>                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>-->
+    </div>
+</div>
