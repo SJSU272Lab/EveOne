@@ -68,6 +68,16 @@ app.factory('Scopes', function ($rootScope) {
 });
 
 
+app.run(['$rootScope', function ($rootScope) {
+	$rootScope.logout = function () {
+		$http.get('/sessiondestroy').success(function (response) {
+			console.log("session destroyed");
+		});
+	};
+}]);
+
+
+
 //student
 app.controller('StudentController', ['$scope', '$http', '$rootScope', function ($scope, $http, $rootScope) {
 	console.log("Hello World from Studentcontroller");
