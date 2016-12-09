@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "986411910895",
+    "firebase_url": "https://eveone-cmpe272.firebaseio.com",
+    "project_id": "eveone-cmpe272",
+    "storage_bucket": "eveone-cmpe272.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986411910895:android:5e863dbb8810a155",
+        "android_client_info": {
+          "package_name": "com.akshaysonvane.eveone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986411910895-r11lan57eel2fed2pc4aefpu1sko0ena.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4V520-Ips_sD1MIg9I3yn2-q4i1AvmwA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
