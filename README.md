@@ -1,6 +1,6 @@
 ## Fall16-Team25
 
-##Project Name: EventOne
+##Project Name: EveOne
 
 Table of Contents
 -----------------
