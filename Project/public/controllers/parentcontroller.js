@@ -78,6 +78,13 @@ app.controller('ParentDashboardController', ['$scope', '$http', '$rootScope', '$
 						});
 					}
 				});
+				
+				//count number of invitations
+				$http.get('/countparentinvitations/' + $rootScope.parent_username).success(function (response) {
+					console.log(response);
+					$scope.invitations_count = response;
+				});
+				
 			}
 
 		});

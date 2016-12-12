@@ -772,6 +772,20 @@ app.get('/getinvitedeventcount/:name', function (req, res) {
   }));
 });
 
+//count number of invitations
+app.get('/countparentinvitations/:email', function (req, res) {
+
+  console.log('I received a parent GET request');
+
+  db.parentnotification.count({
+    "ParentEmail": req.params.email
+  }, (function (err, docs) {
+    console.log(docs);
+    res.json(docs);
+
+  }));
+});
+
 
 app.listen(process.env.PORT || 3000, function () {
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
