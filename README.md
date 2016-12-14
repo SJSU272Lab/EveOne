@@ -8,7 +8,6 @@ Table of Contents
 - [Abstract](#abstract)
 - [Judging Rules](#judging-rules)
 - [User Stories](#user-stories)
-- [OAuth URI Image](#oauth-uri-image)
 - [Heroku deployment](#heroku-deployment) 
 
 #
@@ -69,13 +68,13 @@ good enough for now..
 #
 #
 
-OAuth URI Image
----------------
-
-![](https://cloud.githubusercontent.com/assets/21318180/20609485/03ab2ed2-b242-11e6-8258-201611297c81.PNG)
 
 
 Heroku deployment
 -----------------
 
 https://eveone.herokuapp.com/
+
+
+
+
