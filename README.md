@@ -8,7 +8,7 @@
 
 ###Presentation URL: http://prezi.com/wageif707gya/?utm_campaign=share&utm_medium=copy&rc=ex0share
 
-###nderstand EveOne URL: https://github.com/SJSU272Lab/EveOne/tree/master/Promotional%20video
+###Understand EveOne URL: https://github.com/SJSU272Lab/EveOne/tree/master/Promotional%20video
 
 
 Table of Contents
