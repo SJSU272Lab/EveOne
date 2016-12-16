@@ -9,7 +9,7 @@
 Table of Contents
 -----------------
 
-- [Abstract](#abstract)
+- [About EveOne](#about-eveone)
 - [Judging Rules](#judging-rules)
 - [User Stories](#user-stories)
 - [Heroku deployment](#heroku-deployment) 
@@ -18,11 +18,11 @@ Table of Contents
 #
 #
 
-#Abstract
+
+#About EveOne
 --------
 
-We are building a solution to automate managing events/tournaments (such as speech and debate) for schools where parent participate for judging the event.
-Our approach is to facilitate collaboration between organizer and parents seamlessly. Organizer uses our web application to create and manage event and judges information, he can access parent list of mail id's to send invites for event. Parent uses mobile application to accept or decline invites. Parent attendance in the event can be recorded by scanning the parent QR code using QR scanner. We propose a filter algorithm to filter out parents as judges and also backup judges for every team tournament. Filter algorithm will discard parent as a judge if its not in accordance with the policy. On demand matching(back filling)  can be done by the system itself.
+We have built a solution to automate managing events/tournaments (such as speech and debate) for schools where parent participate for judging the event. Our approach is to facilitate collaboration between organizer and parents seamlessly. Organizer uses our web application to create and manage event and judges information, he can access parent list of mail id's to send invites for event. Parent uses mobile application to accept or decline invites.On demand matching(back filling)  can be done by the admin itself.
 
 #
 #
@@ -30,6 +30,34 @@ Judging Rules
 --------------
 
 ### Please see the judging instruction to understand the process: http://www.myteacherpages.com/webpages/SpeechandDebate/files/Judging%20Speech%20and%20Debate%20Instructions%20Manual.pdf
+
+#
+#
+Problem Statement :
+--------------
+In today’s date most of the schools face serious problems in managing an event. All parents are
+forced to attend the event because there is no clarity on number of judges and who will show
+up. Events rarely start on time and there is general confusion surrounding this process. Once
+parents show up to the event they have to mark their presence by signing on a paper and then
+the administrator has to keep track of all the paperwork. Once parents attendance is done the
+management has to assign these parents as judges to the teams, which consume a lot of time
+and which itself leads to delay in starting the event. Parents raise conflict on some parents
+judging their own children or children related to their family/friends, regarding this issue even
+management is helpless.
+#
+#
+Solution:
+--------------
+We have built a solution to automate managing events/tournaments (such as speech
+and debate) for schools where parent participate for judging the event. Our approach is
+to facilitate collaboration between organizer and parents seamlessly. Organizers use
+our web application to create and manage event and judges information, he/she can
+access parent list of mail id's to send invites for event. Parent uses mobile application to
+accept or decline invites. Parent attendance in the event can be recorded by system.
+We have implemented a filter algorithm to filter out parents as judges and also backup
+judges for every team tournament. Filter algorithm will discard parent as a judge if its
+not in accordance with the policy. On demand matching(back filling) can be done by the
+system itself.
 
 #
 #
@@ -72,13 +100,34 @@ good enough for now..
 #
 #
 
+Development Stack
+------------
+Technology Stack implemented:
+· MongoDB
+· ExpressJS
+· AngularJS
+· NodeJS
+· Heroku
 
+Database:
+MongoDB NOSQL database selected because all our data operations are giving or receiving
+JSON data and it is easier to perform CRUD operations on JSON using MongoDB. 
 
-Heroku deployment
------------------
+Server:
+Node.JS Server using Express Framework. Express is the easiest way to handle angular
+requests and perform operations on a NOSQL database.
 
-https://eveone.herokuapp.com/
+Front-End:
+Bootstrap Front-End with AngularJS controllers – UI is device independent.
 
+Cloud deployment:
+Heroku is the platform used for deploying the application on cloud, to ensure that multi - tenant
+architecture is maintained. Along with this it also allows us to auto scale your app in the cloud.
+The main advantage is that in case our users lose or replace their phones, their app data is safe
+as it is stored on the cloud.
+Heroku deployment : https://eveone.herokuapp.com/
 
+#
+#
 
 
