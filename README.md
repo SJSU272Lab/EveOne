@@ -1,6 +1,6 @@
 ## Fall16-Team25
 
-##Project Name: EveOne
+##Project Name: EveOne - Go Paperless
 
 ### application URL : https://eveone.herokuapp.com/
 
