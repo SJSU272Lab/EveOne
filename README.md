@@ -11,12 +11,11 @@ Table of Contents
 
 - [About EveOne](#about-eveone)
 - [Judging Rules](#judging-rules)
--[Problem Statement](#problem-statement)
--[Solution](#soution)
+- [Problem Statement](#problem-statement)
+- [Solution](#soution)
 - [User Stories](#user-stories)
 - [Development Stack](#development-stack) 
 
-#
 #
 #
 
@@ -68,35 +67,22 @@ User Stories
 ------------
 
 Actors :
-
-1)Organizer	: 	Karen, who manages events from start to end. Creating events, sending invites and 
-				organizing events are prime responsibilities.
+1)Organizer : Karen, who manages events from start to end. Creating events, sending
+invites and organizing events are prime responsibilities.
 2) Student Participant: Sam student participant in the course or event
-
-2)Parent Judge	: 	David, Parent of the participant (judge) in the event.
-
-3) Parent Volunteer : Kumar, parent of the participant or senior student 
-
-
-Use case #1: Karen creates a new event (tournament), sets up policy and schedule 
-
-Use case #2: Sam and other students are invited to signup for the tournament 
-
-Use Case #3:  Karen monitors the signup, and sends invites to parents (of signed up students) for judging
-
-Use case #4: Karen monitors the sign up and get alerted on low signup for judging 
-
+3)Parent Judge : David, Parent of the participant (judge) in the event.
+4) Parent Volunteer : Kumar, parent of the participant or senior student
+Use case #1: Karen creates a new event (tournament), sets up policy and schedule
+Use case #2: Sam and other students are invited to signup for the tournament
+Use Case #3: Karen monitors the signup, and sends invites to parents (of signed up
+students) for judging
+Use case #4: Karen monitors the sign up and gets alerted on low signup for judging
 Use case $5: Karen closes the event signup which triggers final preparations
-
-Use case #6: David gets invite for judging signup he accepts or rejects, he alsogets to view event details and any instructions 
-
-Use case #7: David scans a QR code published on site of events to acknowledge his presence at site, system records this
-
-Use case #8: In case of absentee, system matches and fills the backlog automatically based on policy and rules
-
-Use case #9: system sends a Thank you note to parents 
-
-good enough for now.. 
+Use case #6: David gets invite for judging signup he accepts or rejects, he also gets to
+view event details and any instructions
+Use case #7: David acknowledges his presence at site, system records this
+Use case #8: In case of absentee, system matches and fills the backlog automatically
+based on policy and rules
 
 
 #
