@@ -11,8 +11,10 @@ Table of Contents
 
 - [About EveOne](#about-eveone)
 - [Judging Rules](#judging-rules)
+-[Problem Statement](#problem-statement)
+-[Solution](#soution)
 - [User Stories](#user-stories)
-- [Heroku deployment](#heroku-deployment) 
+- [Development Stack](#development-stack) 
 
 #
 #
