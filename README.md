@@ -4,9 +4,11 @@
 
 ###Application URL : https://eveone.herokuapp.com/
 
-###Demo Video : https://youtu.be/n_NlZmN8zBw
+###Demo Video URL: https://youtu.be/n_NlZmN8zBw
 
 ###Presentation URL: http://prezi.com/wageif707gya/?utm_campaign=share&utm_medium=copy&rc=ex0share
+
+###nderstand EveOne URL: https://github.com/SJSU272Lab/EveOne/tree/master/Promotional%20video
 
 
 Table of Contents
