@@ -16,10 +16,10 @@
 </div>
 <div class="row">
     <div class="col-lg-12">
-        <form role="form" onload="initialize()">
+        <form role="form" onload="initialize()" name="eventform">
             <div class="form-group">
                 <label>Event Name</label>
-                <input class="form-control" placeholder="Enter Event Name" ng-model="schoolevent.eventName">
+                <input class="form-control" placeholder="Enter Event Name" ng-model="schoolevent.eventName"  ng-required="true">
             </div>
             <div class="form-group">
                 <label> School List</label>
@@ -28,25 +28,25 @@
             </div>
             <div class="form-group">
                 <label>Number of Team</label>
-                <input class="form-control" placeholder="Enter  Number Of Team" ng-model="schoolevent.team">
+                <input class="form-control" placeholder="Enter  Number Of Team" ng-model="schoolevent.team"  ng-required="true">
             </div>
             <div class="form-group">
                 <label>Number of Members in One Team</label>
-                <input class="form-control" placeholder="Enter Number Of members" ng-model="schoolevent.member">
+                <input class="form-control" placeholder="Enter Number Of members" ng-model="schoolevent.member"  ng-required="true">
             </div>
             <div class="form-group">
                 <label>Event Date</label>
-                <input type="text" class="form-control" placeholder="MM/DD/YYYY" ng-model="schoolevent.date">
+                <input type="text" class="form-control" placeholder="MM/DD/YYYY" ng-model="schoolevent.date"  ng-required="true">
             </div>
             <div class="form-group">
                 <label>Event Time</label>
-                <input type="text" class="form-control" placeholder="HH:mm" ng-model="schoolevent.time">
+                <input type="text" class="form-control" placeholder="HH:mm" ng-model="schoolevent.time"  ng-required="true">
             </div>
             <div class="form-group">
                 <label>Event Instruction</label>
                 <textarea rows="5" type="text" class="form-control" ng-model="schoolevent.instruction"></textarea>
             </div>
-            <button type="submit" class="btn btn-info" ng-click="addEvent()">Submit </button>&nbsp;&nbsp;
+            <button type="submit" class="btn btn-info" ng-click="eventform.$valid && addEvent()">Submit </button>&nbsp;&nbsp;
             <button type="reset" class="btn btn-warning">Reset </button>
         </form>
     </div>

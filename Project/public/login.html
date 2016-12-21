@@ -60,44 +60,44 @@
                 </div>
                 <div class="col-lg-6">
                     <h1>Sign Up</h1>
-                    <form role="form">
+                    <form role="form" name="signupform">
                         <div class="form-group">
                             <label>Enter Name</label>
-                            <input class="form-control" placeholder="Name" ng-model="school.name">
+                            <input class="form-control" placeholder="Name" ng-model="school.name" ng-required="true">
                         </div>
                         <div class="form-group">
                             <label>Enter Address</label>
-                            <input class="form-control" placeholder="First St" ng-model="school.address">
+                            <input class="form-control" placeholder="First St" ng-model="school.address" ng-required="true">
                         </div>
                         <div class="form-group">
                             <label>Enter City</label>
-                            <input class="form-control" placeholder="San Jose" ng-model="school.city">
+                            <input class="form-control" placeholder="San Jose" ng-model="school.city" ng-required="true">
                         </div>
                         <div class="form-group">
                             <label>Enter State</label>
-                            <input class="form-control" placeholder="CA" ng-model="school.state">
+                            <input class="form-control" placeholder="CA" ng-model="school.state" ng-required="true">
                         </div>
                         <div class="form-group">
                             <label>Enter Zip</label>
-                            <input class="form-control" placeholder="12345" ng-model="school.zip">
+                            <input class="form-control" placeholder="12345" ng-model="school.zip" ng-required="true">
                         </div>
                         <div class="form-group">
                             <label>Enter Email Id</label>
-                            <input type="email" class="form-control" placeholder="abc@xyz.com" ng-model="school.email">
+                            <input type="email" class="form-control" placeholder="abc@xyz.com" ng-model="school.email" ng-required="true">
                         </div>
                         <div class="form-group">
                             <label>Enter Phone Number</label>
-                            <input class="form-control" placeholder="408 123 4569" ng-model="school.phoneNumber">
+                            <input class="form-control" placeholder="408 123 4569" ng-model="school.phoneNumber" ng-required="true">
                         </div>
                         <div class="form-group">
                             <label>Enter User Name</label>
-                            <input class="form-control" placeholder="username" ng-model="school.username">
+                            <input class="form-control" placeholder="username" ng-model="school.username" ng-required="true">
                         </div>
                         <div class="form-group">
                             <label>Enter Password</label>
-                            <input type="password" class="form-control" placeholder="your password" ng-model="school.password">
+                            <input type="password" class="form-control" placeholder="your password" ng-model="school.password" ng-required="true">
                         </div>
-                        <button type="submit" class="btn btn-info" ng-click="addUser()">Submit </button>&nbsp;&nbsp;
+                        <button type="submit" class="btn btn-info" ng-click="signupform.$valid && addUser()">Submit </button>&nbsp;&nbsp;
                         <button type="reset" class="btn btn-warning">Reset </button>
                     </form>
                 </div>
