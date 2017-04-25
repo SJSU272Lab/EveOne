@@ -1,17 +1,17 @@
 ## Fall16-Team25
 
-##Project Name: EveOne - Go Paperless
+## Project Name: EveOne - Go Paperless
 
-####Application URL : https://eveone.herokuapp.com/
+#### Application URL : https://eveone.herokuapp.com/
 
-####Demo Video URL: https://youtu.be/n_NlZmN8zBw
+#### Demo Video URL: https://youtu.be/n_NlZmN8zBw
 
-####Presentation URL: http://prezi.com/wageif707gya/?utm_campaign=share&utm_medium=copy&rc=ex0share
+#### Presentation URL: http://prezi.com/wageif707gya/?utm_campaign=share&utm_medium=copy&rc=ex0share
 
-####Understand EveOne URL: https://github.com/SJSU272Lab/EveOne/tree/master/Promotional%20video
+#### Understand EveOne URL: https://github.com/SJSU272Lab/EveOne/tree/master/Promotional%20video
 
 #
-##Table of Contents
+## Table of Contents
 -----------------
 - [About EveOne](#about-eveone)
 - [Judging Rules](#judging-rules)
@@ -26,21 +26,21 @@
 #
 
 
-###About EveOne
+### About EveOne
 --------
 
 We have built a solution to automate managing events/tournaments (such as speech and debate) for schools where parent participate for judging the event. Our approach is to facilitate collaboration between organizer and parents seamlessly. Organizer uses our web application to create and manage event and judges information, he can access parent list of mail id's to send invites for event. Parent uses mobile application to accept or decline invites.On demand matching(back filling)  can be done by the admin itself.
 
 #
 
-###Judging Rules
+### Judging Rules
 --------------
 
  Please see the judging instruction to understand the process at this link - http://www.myteacherpages.com/webpages/SpeechandDebate/files/Judging%20Speech%20and%20Debate%20Instructions%20Manual.pdf
 
 
 #
-###Problem Statement
+### Problem Statement
 --------------
 In today’s date most of the schools face serious problems in managing an event. All parents are
 forced to attend the event because there is no clarity on number of judges and who will show
@@ -52,7 +52,7 @@ and which itself leads to delay in starting the event. Parents raise conflict on
 judging their own children or children related to their family/friends, regarding this issue even
 management is helpless.
 #
-###Solution
+### Solution
 --------------
 We have built a solution to automate managing events/tournaments (such as speech
 and debate) for schools where parent participate for judging the event. Our approach is
@@ -67,7 +67,7 @@ system itself.
 
 #
 
-###User Stories
+### User Stories
 ------------
 
 Actors :
@@ -103,7 +103,7 @@ based on policy and rules
 
 #
 
-###Development Stack
+### Development Stack
 ------------
 Technology Stack implemented:
 · MongoDB
